@@ -22,14 +22,14 @@
 	(printout t "Would you like to experiment with new music? Y/N" crlf)
 	(bind ?agree (read) crlf)
 	(if (or (eq ?agree Y)(eq ?agree y))then
-    	(printout t "Awesome!Let's get to know you more.")
-	(printout t " What is your name? " crlf)
-	(bind ?name (read))
-	(printout t " Hello, " ?name crlf)
-	(bind ?*name* ?name)
-        (return TRUE))
-		else (printout t "Come back later for more music recommendations." crlf)
-    			(return FALSE))
+    		(printout t "Awesome!Let's get to know you more.")
+		(printout t " What is your name? " crlf)
+		(bind ?name (read))
+		(printout t " Hello, " ?name crlf)
+		(bind ?*name* ?name)
+        	(return TRUE))
+	else (printout t "Come back later for more music recommendations." crlf)
+    		(return FALSE))
 
 
 (deffunction is-type (?answer ?type) 
